@@ -100,7 +100,7 @@ class ConfirmOtpFragment : BaseFragment<ConfirmOtpFragmentBinding>() {
     private fun random() {
         random = Random.nextInt(100000..999999)
         var mail = SendMail(
-            "duydoan0702@gmail.com", "ocrpfmykiskydjcc", userEmail, "Login Signup app's OTP",
+            "doanduy0702@gmail.com", "tcxubgevdpcmyzzt", userEmail, "Login Signup app's OTP",
             "Your OTP for account authentication is : $random"
         )
         mail.execute()
