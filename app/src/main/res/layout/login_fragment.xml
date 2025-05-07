@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/ln_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/_welcome"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/_20sdp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="@string/sign_in_to_experience_the_course"
+            android:textColor="#989898"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/img_sign_up"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ln_header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctn_Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <EditText
+            android:id="@+id/input_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input_edt"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/email"
+            android:paddingStart="@dimen/_35sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textHint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBottom_toBottomOf="@id/input_Email"
+            app:layout_constraintLeft_toLeftOf="@id/input_Email"
+            app:layout_constraintTop_toTopOf="@id/input_Email" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctn_Pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@+id/ctn_Email"
+        app:layout_constraintStart_toStartOf="@+id/ctn_Email"
+        app:layout_constraintTop_toBottomOf="@+id/ctn_Email">
+
+        <EditText
+            android:id="@+id/input_Pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input_edt"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_35sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textHint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_lock"
+            app:layout_constraintBottom_toBottomOf="@id/input_Pass"
+            app:layout_constraintLeft_toLeftOf="@id/input_Pass"
+            app:layout_constraintTop_toTopOf="@id/input_Pass" />
+
+        <ImageView
+            android:id="@+id/ic_eye_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:src="@drawable/ic_eye_off"
+            app:layout_constraintBottom_toBottomOf="@+id/input_Pass"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_Pass" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_ForgotPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="right"
+        android:text="@string/forgot_password"
+        android:textColor="@color/clr_primary_orange"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintTop_toBottomOf="@id/ctn_Pass" />
+
+    <TextView
+        android:id="@+id/btn_signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_18ssp"
+        android:background="@drawable/bg_btn_sign"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintTop_toBottomOf="@id/tv_ForgotPass" />
+
+    <LinearLayout
+        android:id="@+id/btn_signInForGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_18ssp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/bg_btn_sign_for_google"
+        app:layout_constraintTop_toBottomOf="@id/btn_signIn"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_google"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_gravity="center"
+            android:text="@string/sign_in_for_google"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btn_signInForGoogle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/no_account"
+            android:textColor="#252525"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tv_signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:textColor="@color/clr_primary_orange"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/blue_primary" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

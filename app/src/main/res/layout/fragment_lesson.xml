@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/clr_primary_orange">
+
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:background="@color/clr_primary_orange">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_hello_header"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:text="Part 1: Entering the journey"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
+            <TextView
+                android:id="@+id/txt_description"
+                android:layout_width="wrap_content"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Name drinks, introduce yourself"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#828282"
+                app:layout_constraintTop_toBottomOf="@id/txt_hello_header"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ic_birt_home"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="@id/title"
+        android:layout_marginEnd="@dimen/_14sdp"
+        app:layout_constraintRight_toRightOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        android:src="@drawable/img_part1"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/bg_rcv_home"
+        app:layout_constraintTop_toBottomOf="@id/ic_birt_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+       >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            >
+            <ImageView
+                android:id="@+id/img_begin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_begin"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <FrameLayout
+                android:id="@+id/fr_study_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_begin"
+                >
+                <ImageView
+                    android:id="@+id/iv_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_start_lesson"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_begin"
+                    />
+
+                <ImageView
+                    android:id="@+id/bg_lesson_next_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/bg_lesson_next"/>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fr_study_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                app:layout_constraintEnd_toStartOf="@+id/fr_study_1"
+                app:layout_constraintStart_toStartOf="@+id/fr_study_1"
+                app:layout_constraintTop_toBottomOf="@id/fr_study_1"
+                >
+                <ImageView
+                    android:id="@+id/iv_study_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_study_2"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_start"
+                    app:layout_constraintStart_toStartOf="@+id/iv_start"
+                    app:layout_constraintTop_toBottomOf="@id/iv_start" />
+
+                <ImageView
+                    android:id="@+id/bg_lesson_next_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/bg_lesson_next"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fr_study_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                app:layout_constraintEnd_toStartOf="@+id/fr_study_2"
+                app:layout_constraintStart_toStartOf="@+id/fr_study_2"
+                app:layout_constraintTop_toBottomOf="@id/fr_study_2"
+                >
+                <ImageView
+                    android:id="@+id/iv_study_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_study_3"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toStartOf="@+id/fr_study_2"
+                    app:layout_constraintStart_toStartOf="@+id/fr_study_2"
+                    app:layout_constraintTop_toBottomOf="@id/fr_study_2" />
+
+                <ImageView
+                    android:id="@+id/bg_lesson_next_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/bg_lesson_next"/>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fr_study_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="@+id/fr_study_3"
+                app:layout_constraintStart_toEndOf="@+id/fr_study_3"
+                app:layout_constraintTop_toBottomOf="@id/fr_study_3"
+                >
+                <ImageView
+                    android:id="@+id/iv_study_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_study_4"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toEndOf="@+id/fr_study_3"
+                    app:layout_constraintStart_toEndOf="@+id/fr_study_3"
+                    app:layout_constraintTop_toBottomOf="@id/fr_study_3" />
+
+                <ImageView
+                    android:id="@+id/bg_lesson_next_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/bg_lesson_next"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fr_study_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="@+id/fr_study_4"
+                app:layout_constraintStart_toEndOf="@+id/fr_study_4"
+                app:layout_constraintTop_toBottomOf="@id/fr_study_4"
+                >
+                <ImageView
+                    android:id="@+id/iv_study_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_study_5"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toEndOf="@+id/fr_study_4"
+                    app:layout_constraintStart_toEndOf="@+id/fr_study_4"
+                    app:layout_constraintTop_toBottomOf="@id/fr_study_4" />
+
+                <ImageView
+                    android:id="@+id/bg_lesson_next_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/bg_lesson_next"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fr_study_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="@+id/fr_study_5"
+                app:layout_constraintStart_toStartOf="@+id/fr_study_5"
+                app:layout_constraintTop_toBottomOf="@id/fr_study_5"
+                >
+                <ImageView
+                    android:id="@+id/iv_study_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_study_6"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toEndOf="@+id/fr_study_5"
+                    app:layout_constraintStart_toStartOf="@+id/fr_study_5"
+                    app:layout_constraintTop_toBottomOf="@id/fr_study_5" />
+
+                <ImageView
+                    android:id="@+id/bg_lesson_next_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/bg_lesson_next"/>
+            </FrameLayout>
+
+
+            <ImageView
+                android:id="@+id/img_one_lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_one_lesson"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/fr_study_6"
+                app:layout_constraintTop_toBottomOf="@+id/fr_study_5" />
+
+            <ImageView
+                android:id="@+id/img_two_lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/img_two_lesson"
+                app:layout_constraintBottom_toTopOf="@+id/fr_study_4"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/fr_study_2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:src="@drawable/ic_close"
+        android:layout_margin="@dimen/_10sdp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <FrameLayout
+        android:id="@+id/fr_loading"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_height="match_parent"
+        android:background="#33000000">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_40sdp"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/_12sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_12sdp">
+
+        <TextView
+            android:id="@+id/tv_des_permission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:gravity="center"
+            android:text="@string/you_must_grant_permission_to_use"
+            android:textColor="#222222"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_settting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_button_access_permission"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/goto_setting"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_des_permission" />
+
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/close"
+            android:textColor="#222222"
+            android:textSize="@dimen/_14ssp"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/tv_settting" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

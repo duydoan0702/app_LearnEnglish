@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/bg_item_study"
+    android:padding="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_6sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:src="@drawable/img_part1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toStartOf="@+id/ic_right"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Part 1: Entering the journey"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_numberDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="3"
+                android:textColor="#131313"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="/"
+                android:layout_marginHorizontal="@dimen/_1sdp"
+                android:textColor="#131313"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/txt_numberLesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="5"
+                android:textColor="#808080"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/b_i"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:textColor="#808080"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ic_right"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+    <com.jaygoo.widget.RangeSeekBar
+        android:id="@+id/sb_percent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:rsb_gravity="bottom"
+        app:rsb_max="5"
+        app:rsb_min="0"
+        app:rsb_mode="single"
+        app:rsb_progress_color="@color/clr_primary_orange"
+        app:rsb_progress_default_color="@color/clr_primary_orange_second"
+        app:rsb_progress_height="5dp"
+        app:rsb_step_auto_bonding="true"
+        app:rsb_step_color="@color/clr_primary_orange"
+        app:rsb_step_height="3dp"
+        app:rsb_step_radius="3dp"
+        app:rsb_step_width="3dp"
+        app:rsb_thumb_drawable="@drawable/end_point"
+        app:rsb_thumb_height="@dimen/_4sdp"
+        app:rsb_thumb_width="@dimen/_4sdp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/sb_percent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="@+id/sb_percent"
+        app:layout_constraintTop_toTopOf="@id/sb_percent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

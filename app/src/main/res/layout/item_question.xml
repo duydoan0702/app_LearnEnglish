@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_Name_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Đây là cái gì?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_Image_Question"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/ic_speak_question"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Name_question" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/iv_Image_Question"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:id="@+id/ll_option"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/txt_option1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:text="Answer 1"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_option"
+            app:layout_constraintBottom_toTopOf="@+id/txt_option3"
+            app:layout_constraintEnd_toStartOf="@+id/txt_option2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_option2"
+            android:layout_width="0dp"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/_14ssp"
+            android:text="Answer 2"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_option"
+            app:layout_constraintBottom_toTopOf="@+id/txt_option4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_option1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_option3"
+            android:layout_width="0dp"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/_14ssp"
+            android:text="Answer 3"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_option"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txt_option4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_option1" />
+
+        <TextView
+            android:id="@+id/txt_option4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/_14ssp"
+            android:text="Answer 4"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_option"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_option3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_option2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_done_question_faild"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_16sdp"
+        android:visibility="invisible"
+        android:paddingHorizontal="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_option">
+
+        <TextView
+            android:id="@+id/tv_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF2442"
+            android:textSize="@dimen/_20sdp"
+            android:text="@string/incorrect"
+            android:fontFamily="@font/roboto_medium"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF2442"
+                android:textSize="@dimen/_14sdp"
+                android:text="@string/answer"
+                android:fontFamily="@font/roboto_medium"
+                />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FF2442"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="@dimen/_14sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:text="Cái mũi"
+                android:fontFamily="@font/roboto_regular"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_next_fail"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="quoted from\ndictionary.cambridge.org"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/_14sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

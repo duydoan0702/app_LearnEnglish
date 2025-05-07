@@ -1,0 +1,120 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id"com.google.firebase.crashlytics"
+    //TODO Uncomment if use firebase remote config
+//    id 'com.google.firebase.firebase-perf'
+//    id 'com.google.gms.google-services'
+//    id 'com.google.firebase.crashlytics'
+}
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.mobiai"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        project.ext.set("defaultBuildVariant", "appTest")
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+    viewBinding {
+        enabled true
+    }
+    dataBinding {
+        enabled true
+    }
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        appTest {
+            manifestPlaceholders = [admob_app_id: "ca-app-pub-4973559944609228~1107567880"]
+            buildConfigField "boolean", "build_debug", "true"
+            buildConfigField "String", "inter_splash", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "native_language", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "openApp_resume", "\"ca-app-pub-3940256099942544/3419835294\""
+            buildConfigField "String", "inter_splash_priority", "\"ca-app-pub-3940256099942544/8691691433\""
+            buildConfigField "String", "inter_splash_medium", "\"ca-app-pub-3940256099942544/8691691433\""
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation platform('com.google.firebase:firebase-bom:32.3.1')
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation ("com.google.firebase:firebase-auth-ktx:21.1.0")
+    // Add the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+
+
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+
+
+    //firebase
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-core'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-config'
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+    implementation 'com.google.firebase:firebase-perf-ktx'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-database-ktx")
+    //sdp. ssp
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.3.0'
+
+    //lottie animation
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v3.0.0'
+    def room_version = "2.5.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    /*Horizontal Number Picker*/
+    implementation 'io.github.ShawnLin013:number-picker:2.4.13'
+    implementation 'com.github.1902shubh:SendMail:1.0.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+}

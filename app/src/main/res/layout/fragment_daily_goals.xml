@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/clr_primary_orange"
+    >
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/_10sdp"
+        />
+
+    <TextView
+        android:id="@+id/txt_hello_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_semi_bold"
+        android:text="Your will set your daily goals ?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_birt_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_birt_home"
+        app:layout_constraintTop_toTopOf="@+id/ic_birt_home" />
+    <ImageView
+        android:id="@+id/ic_birt_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_birt_home"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_corner_top"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/ic_birt_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_daily_goals"
+            android:text="10 new words"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:padding="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_daily_goals"
+            android:text="20 new words"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:padding="@dimen/_10sdp"/>
+
+
+        <TextView
+            android:id="@+id/item3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_daily_goals"
+            android:text="30 new words"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:padding="@dimen/_10sdp"/>
+
+
+        <TextView
+            android:id="@+id/item4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_daily_goals"
+            android:text="40 new words"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:padding="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/item5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_daily_goals"
+            android:text="50 new words"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:padding="@dimen/_10sdp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/bg_btn_sign"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

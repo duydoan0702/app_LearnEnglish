@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Radius và Stroke -->
+    <item android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- Màu nền -->
+            <corners android:radius="@dimen/_10sdp" /> <!-- Radius -->
+            <stroke android:width="0dp" android:color="#000000" /> <!-- Stroke -->
+        </shape>
+    </item>
+</layer-list>

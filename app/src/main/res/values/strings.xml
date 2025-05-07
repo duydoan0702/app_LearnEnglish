@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">Learn VN</string>
+    <string name="this_action_can_contain_ad">This action can contain ad</string>
+    <string name="facebook_app_id">1234</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_spain" translatable="false">Espalier</string>
+    <string name="language_portugal" translatable="false">Portuguese</string>
+    <string name="language_hindi" translatable="false">भारतीय भाषा</string>
+    <string name="language_germany" translatable="false">Deutsch</string>
+    <string name="language_brazil" translatable="false">Lingua Brasilia</string>
+    <string name="language_japan" translatable="false">日本</string>
+    <string name="language_korean" translatable="false">한국어</string>
+    <string name="language_france" translatable="false">Francais</string>
+    <string name="language_china" translatable="false">中国人</string>
+    <string name="languages">Languages</string>
+    <string name="_welcome">Welcome 👋</string>
+    <string name="register_now_to_experience_the_course">Register now to experience the course</string>
+    <string name="first_and_last_name">First and last name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="enter_the_password">Enter the password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account"><font color="#252525">Already have an account? </font></string>
+    <string name="sign_in_to_experience_the_course">Sign in to experience the course</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="no_account">No account?</string>
+    <string name="_forgot_password_fragment">Forgot password</string>
+    <string name="old_password">Old password</string>
+    <string name="new_password">New password</string>
+    <string name="send">Send</string>
+    <string name="otp">OTP</string>
+    <string name="enter_a_new_password">Enter a new password</string>
+    <string name="change_password">Change password</string>
+    <string name="reminder">Reminder</string>
+    <string name="setting">Setting</string>
+    <string name="profile">Profile</string>
+    <string name="log_out">Log out</string>
+    <string name="daily_exercise_reminder">Daily Exercise Reminder</string>
+    <string name="repeat">Repeat</string>
+    <string name="it_time_to_learn">It\'s time to learn!</string>
+    <string name="_mon">Mon</string>
+    <string name="_tue">Tue</string>
+    <string name="_wed">Wed</string>
+    <string name="_thu">Thu</string>
+    <string name="_fri">Fri</string>
+    <string name="_sat">Sat</string>
+    <string name="_sun">Sun</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="save">Save</string>
+    <string name="time">Time</string>
+    <string name="time_format">%02d</string>
+    <string name="total_ruby">Total Ruby</string>
+    <string name="total_xp">Total XP</string>
+    <string name="let_s_learn_vietnamese_pronunciation">Let\'s learn Vietnamese pronunciation!</string>
+    <string name="practice_listening_and_learning_to_pronounce_sounds_in_vietnamese">Practice listening and learning to pronounce sounds in Vietnamese</string>
+    <string name="star_the_test">Star the test</string>
+    <string name="accumulate_points_to_receive_interesting_gifts">Accumulate points to receive interesting gifts.</string>
+    <string name="receive_gift">Receive gift</string>
+    <string name="successfully_received_gifts">Successfully received gifts!</string>
+    <string name="_continue">Continue</string>
+    <string name="rank">Rank</string>
+    <string name="home">Home</string>
+    <string name="pronounce">Pronounce</string>
+    <string name="gift">Gift</string>
+    <string name="start_your_journey_now">Start your journey now!</string>
+    <string name="you_have_fallen_out_of_the_top_10">You have fallen out of the top 3!</string>
+    <string name="try_to_get_back_to_the_top_position">Try to get back to the top position</string>
+    <string name="you_must_grant_permission_to_use">You must grant permission to use</string>
+    <string name="goto_setting">Goto Setting</string>
+    <string name="c_a">CỬA</string>
+    <string name="answer">Answer :</string>
+    <string name="next">Next</string>
+    <string name="incorrect">Incorrect!</string>
+    <string name="correct">Correct!</string>
+    <string name="result">Result</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="you_have_just_completed_the_excellent_challenge">You have just completed the excellent challenge.</string>
+    <string name="share">Share</string>
+    <string name="review">Review</string>
+    <string name="chu_de_hoc">Chủ đề học</string>
+    <string name="cau_hoi_bai_hoc">Câu hỏi bài học</string>
+    <string name="user">Người dùng</string>
+    <string name="welcome_with_nexploreviet">Welcome with\nExploreViet</string>
+    <string name="name">Name:</string>
+    <string name="add_topic">ADD TOPIC</string>
+    <string name="topic_code">Topic Code:</string>
+    <string name="number_lesson">Number Lesson:</string>
+    <string name="image_topic">Image Topic:</string>
+    <string name="click_for_to_search">click for to search....</string>
+    <string name="topic">Topic</string>
+    <string name="skill">skill</string>
+    <string name="listening">Listening</string>
+    <string name="writing">Writing</string>
+    <string name="reading">Reading</string>
+    <string name="speaking">Speaking</string>
+    <string name="add_question">Add question</string>
+    <string name="sign_in_for_google">Sign in for Google</string>
+    <string name="defaults_web_client_id">AIzaSyAHsSTU60QaCtRjd6FrCGCvWg9dptQuzMs</string>
+    <string name="vocabulary">Vocabulary</string>
+    <string name="_structure">Structure</string>
+    <string name="word_type">Word type</string>
+    <string name="feedback">Feedback</string>
+    <string name="b_i">Bài</string>
+    <string name="learned">Learned</string>
+    <string name="whoops">Whoops</string>
+    <string name="you_don_t_have_any_design_yet">You don’t have any Lesson yet !</string>
+    <string name="done">Done</string>
+    <string name="close">Close</string>
+
+</resources>
