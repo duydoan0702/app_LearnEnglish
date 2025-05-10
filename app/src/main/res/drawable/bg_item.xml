@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Hiệu ứng đổ bóng -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/>
+            <solid android:color="#E0E0E0"/>
+        </shape>
+    </item>
+
+    <!-- Nền trắng có bo góc -->
+    <item android:left="2dp" android:right="2dp" android:top="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/>
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+
+</layer-list>

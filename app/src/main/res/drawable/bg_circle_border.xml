@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Bóng viền -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#DDDDDD"/> <!-- Màu viền -->
+            <size android:width="80dp" android:height="80dp"/>
+        </shape>
+    </item>
+
+    <!-- Nền tròn bên trong -->
+    <item android:insetLeft="4dp" android:insetTop="4dp"
+        android:insetRight="4dp" android:insetBottom="4dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/> <!-- Màu nền bên trong -->
+        </shape>
+    </item>
+
+</layer-list>

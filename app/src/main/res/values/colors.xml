@@ -15,7 +15,7 @@
     <color name="text_incorrect">#FF2442</color>
     <color name="text_great">#99CC29</color>
 
-    <color name="clr_primary_orange">#FFBE5D</color>
+    <color name="clr_primary_orange">#32357a</color>
     <color name="clr_primary_orange_second">#FAE2BD</color>
     <color name="unselected_text_color">#86868E</color>
 
@@ -442,4 +442,8 @@
     <color name="color_correct">#99CC29</color>
     <color name="bg_color_correct">#F5FFD8</color>
 
+
+    <color name="btn_pressed_color">#DDDDDD</color> <!-- Màu nền khi nhấn -->
+    <color name="purple">#8692f7</color>
+    <color name="dark_blue">#32357a</color>
 </resources>
