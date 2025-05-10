@@ -18,15 +18,16 @@ import java.util.Locale
 class Announcer(context: Context) : OnInitListener {
     var context = context
     var tts: TextToSpeech? = null
-//    private var countryLanguage = Locale(SharedPreferenceUtils.languageCode).country.toUpperCase()
+    // private var countryLanguage = Locale(SharedPreferenceUtils.languageCode).country.toUpperCase()
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            val result = tts!!.setLanguage(Locale("vi","VN"))
+            val result = tts!!.setLanguage(Locale("en", "US"))
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                 context.showToast("Language not supported")
             }
         }
     }
+
 
     fun initTTS(context: Context) {
         tts = TextToSpeech(context, this)
