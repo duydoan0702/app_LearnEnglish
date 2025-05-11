@@ -60,7 +60,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>() {
         try {
             val uriText = String.format(
                 "mailto:%s?subject=%s&body=%s",
-                "letuanvu425@gmail.com",
+                "duydoan0702@gmail.com",
                 "Feedback from " + getString(R.string.app_name),
                 ""
             )
