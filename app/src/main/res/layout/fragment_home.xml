@@ -21,16 +21,17 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/txt_ruby"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1087"
-                android:textSize="@dimen/_14sdp"
                 android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/black"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                android:text="1087"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
             <ImageView
                 android:id="@+id/ic_ruby"
                 android:layout_width="wrap_content"
@@ -39,17 +40,18 @@
                 app:layout_constraintLeft_toRightOf="@id/txt_ruby"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginLeft="@dimen/_2sdp"/>
+
             <TextView
                 android:id="@+id/txt_experience"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1087"
-                android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/black"
                 android:layout_marginLeft="@dimen/_10sdp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/ic_ruby"/>
+                android:fontFamily="@font/roboto_medium"
+                android:text="1087"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintLeft_toRightOf="@id/ic_ruby"
+                app:layout_constraintTop_toTopOf="parent" />
             <ImageView
                 android:id="@+id/ic_experience"
                 android:layout_width="wrap_content"
@@ -65,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gilroy_semi_bold"
                 android:text="Hello..."
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_18sdp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txt_ruby" />

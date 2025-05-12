@@ -35,18 +35,19 @@
             android:textColor="#989898"
             android:layout_marginTop="@dimen/_12sdp"
             android:gravity="center"/>
+
         <TextView
             android:id="@+id/btnTest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/star_the_test"
+            android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/bg_blue_button"
-            android:textSize="@dimen/_13sdp"
-            android:gravity="center"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
             android:fontFamily="@font/roboto_bold"
-            android:layout_marginTop="@dimen/_20sdp"/>
+            android:gravity="center"
+            android:text="@string/star_the_test"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

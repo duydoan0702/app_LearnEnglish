@@ -29,6 +29,7 @@ class BottomNavigationFragment : BaseFragment<FragmentBottomNavigationBinding>()
     private val GIFT_FRAGMENT = GiftFragment.instance()
     private val RANK_FRAGMENT = RankFragment.instance()
     private val SETTINGS_FRAGMENT = SettingFragment.instance()
+    private val HOME_MAIN_FRAGMENT = HomeMainFragment.instance()
     private var currentFragment: Fragment = HOME_FRAGMENT
 
     override fun initView() {
@@ -39,6 +40,10 @@ class BottomNavigationFragment : BaseFragment<FragmentBottomNavigationBinding>()
         requireActivity().supportFragmentManager.beginTransaction()
             .add(binding.layoutAddFragmentMain.id, PRONOUNCE_FRAGMENT).hide(PRONOUNCE_FRAGMENT)
             .commit()
+        requireActivity().supportFragmentManager.beginTransaction()
+            .add(binding.layoutAddFragmentMain.id, HOME_MAIN_FRAGMENT).hide(HOME_MAIN_FRAGMENT)
+            .commit()
+
         /* requireActivity().supportFragmentManager.beginTransaction().add(binding.layoutAddFragmentMain.id,GIFT_FRAGMENT).
          hide(GIFT_FRAGMENT).commit()*/
         requireActivity().supportFragmentManager.beginTransaction()
@@ -99,7 +104,12 @@ class BottomNavigationFragment : BaseFragment<FragmentBottomNavigationBinding>()
                         currentFragment = PRONOUNCE_FRAGMENT
                     }
                 }
-
+                R.id.action_main_home -> {
+                    if (currentFragment != HOME_MAIN_FRAGMENT) {
+                        showFragment(HOME_MAIN_FRAGMENT, currentFragment)
+                        currentFragment = HOME_MAIN_FRAGMENT
+                    }
+                }
                 /* R.id.action_gift -> {
                      if (currentFragment != GIFT_FRAGMENT){
                          showFragment(GIFT_FRAGMENT,currentFragment)
