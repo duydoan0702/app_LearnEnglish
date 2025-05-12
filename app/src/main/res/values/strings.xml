@@ -1,4 +1,5 @@
 <resources>
+    <string name="default_web_client_id">945234793193-n8s08h92t35i5hr2m18pvp9fq0i8bc1h.apps.googleusercontent.com</string>
     <string name="app_name">Learn VN</string>
     <string name="this_action_can_contain_ad">This action can contain ad</string>
     <string name="facebook_app_id">1234</string>

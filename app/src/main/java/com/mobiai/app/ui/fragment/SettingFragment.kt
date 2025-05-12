@@ -5,6 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.mobiai.R
 import com.mobiai.app.utils.setOnSafeClickListener
@@ -74,10 +76,20 @@ class SettingFragment : BaseFragment<FragmentSettingBinding>() {
     private fun signOut() {
         val auth = FirebaseAuth.getInstance()
         auth.signOut()
-        SharedPreferenceUtils.emailLogin = null
-        SharedPreferenceUtils.keyUserLogin = null
-        replaceFragment(SignInFragment.instance())
 
+        // Sign out khỏi Google
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        val googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+        googleSignInClient.signOut().addOnCompleteListener {
+            // Xoá dữ liệu local sau khi đã sign out cả Firebase và Google
+            SharedPreferenceUtils.emailLogin = null
+            SharedPreferenceUtils.keyUserLogin = null
+
+            replaceFragment(SignInFragment.instance())
+        }
     }
 
     override fun getBinding(
