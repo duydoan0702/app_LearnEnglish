@@ -15,8 +15,8 @@
     <color name="text_incorrect">#FF2442</color>
     <color name="text_great">#99CC29</color>
 
-    <color name="clr_primary_orange">#32357a</color>
-    <color name="clr_primary_orange_second">#FAE2BD</color>
+    <color name="clr_primary_orange">#1565C0</color>
+    <color name="clr_primary_orange_second">#FB8C00</color>
     <color name="unselected_text_color">#86868E</color>
 
     <!--    primary color-->
@@ -434,7 +434,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#EAF8F5</color>
     <color name="blue_primary">#482FF7</color>
     <color name="gray_text">#78828A</color>
     <color name="color_text_disable_gift">#B5B5C3</color>

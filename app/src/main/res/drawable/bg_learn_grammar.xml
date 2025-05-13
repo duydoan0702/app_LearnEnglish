@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Nền màu cam -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFA726" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+
+    <!-- Viền màu cam đậm hơn cùng tông -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:color="#FB8C00" android:width="2dp" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+
+</layer-list>

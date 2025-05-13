@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/action_home"
-        android:title="@string/vocabolary"
+        android:title="@string/home"
         android:icon="@drawable/ic_action_home"
         />
     <item android:id="@+id/action_pronounce"
         android:title="@string/pronounce"
         android:icon="@drawable/ic_action_pronunce"
         />
-    <item android:id="@+id/action_main_home"
-        android:title="@string/home"
-        android:icon="@drawable/ic_action_home"
+
+    <item android:id="@+id/action_grammar"
+        android:title="Grammar"
+        android:icon="@drawable/ic_action_grammar"
         />
     <item android:id="@+id/action_rank"
         android:title="@string/rank"

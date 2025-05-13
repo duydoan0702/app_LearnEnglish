@@ -29,8 +29,11 @@ class BottomNavigationFragment : BaseFragment<FragmentBottomNavigationBinding>()
     private val GIFT_FRAGMENT = GiftFragment.instance()
     private val RANK_FRAGMENT = RankFragment.instance()
     private val SETTINGS_FRAGMENT = SettingFragment.instance()
-    private val HOME_MAIN_FRAGMENT = HomeMainFragment.instance()
+    private val VOCABULARY_FRAGMENT = VocabularyFragment.instance()
+    private val GRAMMAR_FRAGMENT = GrammarFragment.instance()
     private var currentFragment: Fragment = HOME_FRAGMENT
+
+
 
     override fun initView() {
         checkUserExists()
@@ -41,7 +44,7 @@ class BottomNavigationFragment : BaseFragment<FragmentBottomNavigationBinding>()
             .add(binding.layoutAddFragmentMain.id, PRONOUNCE_FRAGMENT).hide(PRONOUNCE_FRAGMENT)
             .commit()
         requireActivity().supportFragmentManager.beginTransaction()
-            .add(binding.layoutAddFragmentMain.id, HOME_MAIN_FRAGMENT).hide(HOME_MAIN_FRAGMENT)
+            .add(binding.layoutAddFragmentMain.id, VOCABULARY_FRAGMENT).hide(VOCABULARY_FRAGMENT)
             .commit()
 
         /* requireActivity().supportFragmentManager.beginTransaction().add(binding.layoutAddFragmentMain.id,GIFT_FRAGMENT).
@@ -51,6 +54,10 @@ class BottomNavigationFragment : BaseFragment<FragmentBottomNavigationBinding>()
         requireActivity().supportFragmentManager.beginTransaction()
             .add(binding.layoutAddFragmentMain.id, SETTINGS_FRAGMENT).hide(SETTINGS_FRAGMENT)
             .commit()
+        requireActivity().supportFragmentManager.beginTransaction()
+            .add(binding.layoutAddFragmentMain.id, GRAMMAR_FRAGMENT).hide(GRAMMAR_FRAGMENT)
+            .commit()
+
     }
 
     private fun showFragment(showFragment: Fragment, hideFragment: Fragment) {
@@ -104,12 +111,12 @@ class BottomNavigationFragment : BaseFragment<FragmentBottomNavigationBinding>()
                         currentFragment = PRONOUNCE_FRAGMENT
                     }
                 }
-                R.id.action_main_home -> {
-                    if (currentFragment != HOME_MAIN_FRAGMENT) {
-                        showFragment(HOME_MAIN_FRAGMENT, currentFragment)
-                        currentFragment = HOME_MAIN_FRAGMENT
-                    }
-                }
+//                R.id.action_main_home -> {
+//                    if (currentFragment != HOME_MAIN_FRAGMENT) {
+//                        showFragment(HOME_MAIN_FRAGMENT, currentFragment)
+//                        currentFragment = HOME_MAIN_FRAGMENT
+//                    }
+//                }
                 /* R.id.action_gift -> {
                      if (currentFragment != GIFT_FRAGMENT){
                          showFragment(GIFT_FRAGMENT,currentFragment)
@@ -129,6 +136,14 @@ class BottomNavigationFragment : BaseFragment<FragmentBottomNavigationBinding>()
                         currentFragment = SETTINGS_FRAGMENT
                     }
                 }
+                R.id.action_grammar -> {
+                    if (currentFragment != VOCABULARY_FRAGMENT) {
+                        showFragment(VOCABULARY_FRAGMENT, currentFragment)
+                        currentFragment = VOCABULARY_FRAGMENT
+                    }
+                }
+
+
             }
             true
         }
